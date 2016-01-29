@@ -28,6 +28,18 @@
     });
     [self.view addSubview:lblShow];
     
+    UIButton * btnTest = ({
+        UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 44, [UIScreen mainScreen].bounds.size.width - 80, 44)];
+        [btn addTarget:self action:@selector(Test:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setTitle:@"btn" forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor blueColor]];
+        btn;
+    });
+                          
+    [self.view addSubview:btnTest];
+    
+    [self Test];
+    [self Test];
     
 }
 
@@ -36,4 +48,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)Test {
+    NSLog(@"button tap");
+}
+- (void)Test:(UIButton *)sender {
+    NSLog(@"button tap");
+}
 @end

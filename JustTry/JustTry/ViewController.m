@@ -28,6 +28,7 @@
     });
 //    [self.view addSubview:lblShow];
     
+    //test
     UIButton * btnTest = ({
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 44, [UIScreen mainScreen].bounds.size.width - 80, 44)];
         [btn addTarget:self action:@selector(Test:) forControlEvents:UIControlEventTouchUpInside];

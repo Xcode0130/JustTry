@@ -26,8 +26,9 @@
         lbl.font = [UIFont systemFontOfSize:50];
         lbl;
     });
-    [self.view addSubview:lblShow];
+//    [self.view addSubview:lblShow];
     
+    //test
     UIButton * btnTest = ({
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 44, [UIScreen mainScreen].bounds.size.width - 80, 44)];
         [btn addTarget:self action:@selector(Test:) forControlEvents:UIControlEventTouchUpInside];
@@ -41,17 +42,36 @@
     [self Test];
     [self Test];
     
+    __block NSMutableArray * arr = [[NSMutableArray alloc] initWithCapacity:1];
+    NSArray * arr2 = nil;
+    NSLog(@"%d",[arr2 count]);
+    void (^block)() = ^() {
+        [arr addObject:@"1"];
+        NSLog(@"%p",&arr);
+
+    };
+    block();
+    NSLog(@"%p",&arr);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)SBBtn2:(UIButton *)sender {
+    NSLog(@"sb button2 tap");
+    [self Test];
+
+}
 
 - (void)Test {
-    NSLog(@"button tap");
+    NSLog(@"test");
 }
 - (void)Test:(UIButton *)sender {
     NSLog(@"button tap");
+}
+- (IBAction)SBBtn:(UIButton *)sender {
+    NSLog(@"sb button tap");
+
 }
 @end

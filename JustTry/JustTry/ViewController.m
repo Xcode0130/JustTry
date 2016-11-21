@@ -26,6 +26,7 @@
         lbl.font = [UIFont systemFontOfSize:50];
         lbl;
     });
+    
 //    [self.view addSubview:lblShow];
     
     UIButton * btnTest = ({

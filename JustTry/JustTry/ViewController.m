@@ -74,4 +74,9 @@
     NSLog(@"sb button tap");
 
 }
+
+- (void)test2 {
+
+}
+
 @end
